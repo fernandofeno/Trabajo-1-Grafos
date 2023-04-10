@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Grafos y lenguajes formales 2023-1 Trabajo 1: Aproximacion de pi</title>
+  <!--Hoja con estilos-->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--Libreria Chart.js para graficas-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+  <!--Código javascript con funciones-->
+  <script src=script.js></script>
+</head>
+
+<body>
+  <div id="simulacion">
+    <div id="canvas">
+    </div>
+    <div id="ingreso">
+      <div style="display:flex">
+        <input id="textoRadio" type="number" placeholder="ingresar el radio" min="100""></input>
+        <button id="botonRadio" onclick="ingresarRadio()" style="background-color: orange;">Enter
+          <img src="confirmar.png" style="width: 9px; height: 9px"></img>
+        </button> 
+      </div>
+      <div style="display:flex">
+        <input id="textoN" type="number" placeholder="ingresar N de iteraciones min="1" "></input>
+        <button id="botonN" onclick="ingresarN()" style="background-color: orange;">Enter
+          <img src="confirmar.png" style="width: 9px; height: 9px"></img>
+        </button>
+      </div>
+      <div style="display: flex">
+        <input id="textoM" type="number" placeholder="ingresar N de tiros" min="1"></input>
+        <button id="botonM" onclick="simular()" style="background-color: orange;">Enter
+          <img src="confirmar.png" style="width: 9px; height: 9px"></img>
+        </button>
+      </div>
+    </div>
+  </div>
+  <table id="tabla-pi">
+    <tr>
+      <th>N de simulacion</th>
+      <th>Tiros en el cuadrado</th>
+      <th>Tiros en el circulo</th>
+      <th>Aproximacion de pi</th>
+    </tr>
+  </table>
+
+  <div class="chart-container" id="contenedorGrafico" style="position: relative; height:40vh; width:80vw">
+    <script>crearGrafica();</script>
+  </div>
+
+  </div>
+</body>
+
+</html>
